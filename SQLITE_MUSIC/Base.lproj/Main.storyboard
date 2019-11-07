@@ -1,24 +1,127 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="CMR-09-Uh5">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Navigation Controller-->
+        <scene sceneID="l4c-jE-l0f">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                <navigationController id="CMR-09-Uh5" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="VAj-6G-srb">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="x8j-vL-r7e" kind="relationship" relationship="rootViewController" id="OUb-0q-rpz"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kZY-aG-qKL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-743" y="167"/>
+        </scene>
+        <!--ALBUMS-->
+        <scene sceneID="8pg-8z-yfX">
+            <objects>
+                <viewController id="Xik-ZC-nqc" customClass="ViewAlbums" customModule="SQLITE_MUSIC" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ccv-fa-ak4">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="LIw-ou-ntN"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="ALBUMS" id="fQJ-jF-mCY"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dsb-7e-3yC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="974" y="347"/>
+        </scene>
+        <!--ARTISTS-->
+        <scene sceneID="j5Q-JS-aII">
+            <objects>
+                <viewController id="1Nh-qw-qsj" customClass="ViewArtists" customModule="SQLITE_MUSIC" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="IQL-lQ-hbo">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="5dR-Sa-FHC"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="ARTISTS" id="SLh-mz-rxa"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Snf-XN-hSF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-146" y="1089"/>
+        </scene>
+        <!--SONGS-->
+        <scene sceneID="bXo-lR-GIx">
+            <objects>
+                <viewController id="Yyb-iA-aAW" customClass="ViewSongs" customModule="SQLITE_MUSIC" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="esc-b0-0VG">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="yWi-RN-Dke"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="SONGS" id="aIm-bm-Gjn"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gBB-3U-B4s" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="974" y="-457"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="osb-ee-avX">
+            <objects>
+                <tabBarController id="x8j-vL-r7e" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="TGW-jb-Qdl">
+                        <barButtonItem key="leftBarButtonItem" image="add" id="nWx-ty-vle">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" image="search" id="F3R-iK-K57">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </barButtonItem>
+                    </navigationItem>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="dj7-O6-7KH">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="Yyb-iA-aAW" kind="relationship" relationship="viewControllers" id="V6W-Oe-hKT"/>
+                        <segue destination="Xik-ZC-nqc" kind="relationship" relationship="viewControllers" id="FWa-k1-Hv6"/>
+                        <segue destination="1Nh-qw-qsj" kind="relationship" relationship="viewControllers" id="1RA-dA-qqv"/>
+                        <segue destination="08E-vE-JeQ" kind="relationship" relationship="viewControllers" id="sNO-Zt-25N"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="F3S-2A-LNl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="25" y="107"/>
+        </scene>
+        <!--PLAYLISTS-->
+        <scene sceneID="V1b-VF-Yzn">
+            <objects>
+                <viewController id="08E-vE-JeQ" customClass="ViewPlaylists" customModule="SQLITE_MUSIC" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="02h-Ky-buI">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="zZa-Ot-IfB"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="PLAYLISTS" id="r5M-i3-5oj"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9w4-0u-gOY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="974" y="1253"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="add" width="50" height="50"/>
+        <image name="search" width="50" height="50"/>
+    </resources>
 </document>
